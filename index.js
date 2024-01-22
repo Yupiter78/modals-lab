@@ -7,12 +7,12 @@ const closeBtn = document.querySelector('.close');
 
 window.addEventListener('click', function (event) {
     if (event.target === modal) {
-        modal.style.display = 'none'; // Скрытие модального окна при клике вне изображения
+        modal.style.display = 'none';
     }
 });
 
 closeBtn.addEventListener('click', function () {
-    modal.style.display = 'none'; // Скрытие модального окна при клике на кнопку закрытия
+    modal.style.display = 'none';
 });
 
 window.handleOpenModal = function (src) {
@@ -29,7 +29,7 @@ if (Array.isArray(content)) {
         <img src=${item.img} width="100%" height="100%" alt="image" class="modal-trigger"/>
         <div class="card-body">${titleContent}
           <div class="d-flex justify-content-center align-items-center">
-              <button type="button" class="btn btn-sm btn-primary w-75" data-img="${item.img}" onclick="handleOpenModal(this.getAttribute('data-img'))">Просмотр</button>
+              <button type="button" class="btn btn-sm btn-primary w-75" onclick="handleOpenModal('${item.img}')">Просмотр</button>
           </div>
         </div>
       </div>

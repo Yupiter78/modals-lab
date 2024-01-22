@@ -18,7 +18,7 @@
 }
 
 .custom_modal-content {
-    margin: auto;
+    margin: 50px auto auto;
     display: block;
     width: auto;
     max-height: calc(100vh - 100px);
